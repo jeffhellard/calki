@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Application Web Bureautique</title>
+    
+    <!-- Lien vers Font Awesome pour les icônes -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    
+    <div id="bandeau">
+        <h1>          
+            <i class="fa-solid fa-route"></i>
+            CALKI
+        </h1>
+    </div>
+
+    <div id="conteneur-general">
+        <div id="conteneur-1">
+            <div id="conteneur-1-a">
+                <h2>
+                    <i class="fa-solid fa-user-plus"></i>
+                    Ajouter un nouveau bénéficiaire
+                </h2>
+                <div class="input-container">
+                    <!-- Ajout d'un ID pour le champ de texte -->
+                    <input type="text" id="input-nom" class="input-nom" placeholder="Nom et initiales du prénom?">
+                    <!-- Ajout de l'événement onclick pour appeler la fonction -->
+                    <button onclick="ajouterBeneficiaireListe()">OK</button>
+                </div>
+            </div>
+            <div id="conteneur-1-b">    
+                <label for="mois" class="mois-label">Mois :</label>
+                <select id="mois" onchange="afficherJours()">
+                    <option value="" disabled selected>Sélection</option>
+                    <option value="1">Janvier</option>
+                    <option value="2">Février</option>
+                    <option value="3">Mars</option>
+                    <option value="4">Avril</option>
+                    <option value="5">Mai</option>
+                    <option value="6">Juin</option>
+                    <option value="7">Juillet</option>
+                    <option value="8">Août</option>
+                    <option value="9">Septembre</option>
+                    <option value="10">Octobre</option>
+                    <option value="11">Novembre</option>
+                    <option value="12">Décembre</option>
+                </select>
+            </div>
+        </div>
+		
+		
+        <div class="conteneurs-horizontal">
+			
+            <div id="conteneur-2">
+                <!-- Ajout d'un ID pour la colonne des bénéficiaires -->
+                <div id="beneficiaires-list" class="col-beneficiaires">
+                    <!-- La liste des bénéficiaires apparaîtra ici -->
+                </div>
+            </div>
+			
+            <div id="conteneur-3">
+			    <table>
+                	<thead>
+                    	<tr>
+                        	<th class="col-a"></th> <!-- Cases à cocher dans cette colonne -->
+                        	<th class="spacer"></th>
+                        	<th class="col-jours">Jours</th>
+                        	<th class="spacer"></th>
+                        	<th class="col-trajet">Trajets</th>
+                        	<th class="spacer"></th>
+                        	<th class="col-calcul">Calcul des kilomètres</th>
+                        	<th class="spacer"></th>
+                        	<th class="col-total">Total</th>
+                        </tr>
+                    </thead>
+                    <tbody id="table-body">
+                        <!-- Les jours seront insérés ici -->
+                    </tbody>
+                </table>
+				 
+            </div>
+        </div>
+<div id="conteneur-4">
+               <div class="ligne">
+    <label for="feriers">Total mensuel des kilomètres des dimanches et jours fériés :</label>
+    <input type="text" id="feriers" name="feriers">
+</div>
+	
+	               <div class="ligne2">
+    <label for="totalkm">Total mensuel des kilomètres du lundi au samedi :</label>
+    <input type="text" id="totalkm" name="totalkm">
+</div>
+                
+       
+</div>
+    </div>
+	
+
+    <!-- Lien vers ton fichier JavaScript -->
+    <script src="script.js"></script>
+
+</body>
+</html>

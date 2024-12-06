@@ -1,0 +1,487 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f0f0f0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+/* Bandeau en haut */
+#bandeau {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100px;
+  background-color: #2699FB;
+  display: flex;
+  justify-content: center; /* Centre le contenu horizontalement */
+  align-items: center; /* Centre le contenu verticalement */
+  color: white; /* Applique la couleur blanche par défaut pour le texte */
+}
+
+/* Titre dans le bandeau avec l'icône */
+#bandeau h1 {
+  font-family: Arial, sans-serif;
+  font-size: 40px;
+  color: white; /* Couleur du texte du titre en blanc */
+  font-weight: bold;
+  display: flex;
+  align-items: center; /* Centre verticalement l'icône et le texte */
+}
+
+#bandeau h1 i {
+  margin-right: 10px; /* Espace entre l'icône et le texte */
+  color: white; /* Couleur de l'icône en blanc */
+  font-size: 60px; /* Taille de l'icône */
+}
+
+#conteneur-general {
+  width: 1880px;
+  height: 940px;
+  background-color: #BCE0FD; /* Couleur de fond */
+  padding: 0;
+  margin: 0 auto;
+  border: 1px solid #2699FB;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  display: flex;
+  flex-direction: column;
+}
+
+/* Conteneur 1 */
+#conteneur-1 {
+  width: 100%;
+  height: 60px; /* Hauteur ajustée pour accueillir le contenu */
+  display: flex; /* Permet de mettre les deux conteneurs à l'intérieur côte à côte */
+}
+
+/* Conteneur 1-A */
+#conteneur-1-a {
+  width: 300px; /* Même largeur que conteneur-2 */
+  background-color: #BCE0FD; /* Couleur de fond */
+  padding: 10px; /* Ajoute un peu d'espace à l'intérieur */
+  display: flex;
+  flex-direction: column; /* Aligne le contenu verticalement */
+}
+
+/* Style pour le titre et l'icône dans le conteneur-1-a */
+#conteneur-1-a h2 {
+  font-family: Arial, sans-serif;
+  font-weight: bold;
+  font-size: 16px;
+  color: #2699FB;
+  margin-bottom: 0px;
+  display: flex;
+  align-items: center; /* Centre verticalement l'icône et le texte */
+}
+
+/* Style pour l'icône */
+#conteneur-1-a h2 i {
+  font-size: 20px; /* Taille de l'icône */
+  color: #2699FB; /* Couleur de l'icône */
+  margin-right: 8px; /* Espace entre l'icône et le texte */
+}
+
+/* Champ de saisie et bouton dans conteneur-1-a */
+.input-container {
+  display: flex;
+  align-items: center; /* Centre le contenu verticalement */
+  margin-top: 4px; /* Espace au-dessus du champ de saisie */
+}
+
+input[type="text"] {
+  width: 220px; /* Largeur du champ de saisie */
+  padding: 5px; /* Espace à l'intérieur du champ de saisie */
+  font-family: Arial, sans-serif;
+  font-size: 12px; /* Taille de la police */
+  color: #2699FB; /* Couleur du texte */
+  border: 1px solid #BCE0FD; /* Bordure pour le champ de saisie */
+  border-radius: 5px; /* Coins arrondis */
+  margin-left: 8px;
+}
+
+/* Changer la couleur du contour lors du focus */
+input[type="text"]:focus {
+  border-color: #2699FB; /* Couleur du contour lorsqu'on clique sur l'input */
+  outline: none; /* Enlève le contour bleu par défaut */
+}
+
+button {
+  background-color: #2699FB; /* Couleur du bouton */
+  color: white; /* Couleur du texte du bouton */
+  font-family: Arial, sans-serif;
+  font-size: 12px; /* Taille de la police du bouton */
+  padding: 5px 10px; /* Espace à l'intérieur du bouton */
+  border: none; /* Pas de bordure */
+  border-radius: 5px; /* Coins arrondis */
+  cursor: pointer; /* Changement de curseur au survol */
+  margin-left: 10px;
+}
+
+button:hover {
+  background-color: #1a7bbf; /* Couleur du bouton au survol */
+}
+
+/* Conteneur 1-B */
+#conteneur-1-b {
+  flex-grow: 1; /* Prend l'espace restant, même largeur que conteneur-3 */
+  background-color: #F1F9FF; /* Exemple de couleur, à ajuster selon tes besoins */
+}
+
+#conteneur-1-b {
+  display: flex;
+  justify-content: flex-start; /* Aligne le texte et le sélecteur à gauche */
+  align-items: center; /* Centre verticalement le texte et le sélecteur */
+  padding-left: 30px; /* Optionnel : ajoute un peu d'espace à gauche */
+}
+
+/* Style pour le label "Mois :" */
+.mois-label {
+  font-family: Arial, sans-serif;
+  font-weight: bold;
+  font-size: 18px;
+  color: #2699FB;
+  margin-right: 8px; /* Espace entre le label et le sélecteur */
+  margin-left: 55px;
+}
+
+/* Style pour le sélecteur de mois */
+#mois {
+  padding: 5px;
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+  color: #2699FB;
+  border: 1px solid #BCE0FD;
+  border-radius: 5px;
+}
+
+/* Changer la couleur du contour lors du focus */
+#mois:focus {
+  border-color: #2699FB; /* Couleur du contour lorsqu'on clique sur l'input */
+  outline: none; /* Enlève le contour bleu par défaut */
+}
+
+/* Conteneurs 2 et 3 alignés horizontalement */
+.conteneurs-horizontal {
+  display: flex;
+  width: 100%;
+  height: 100%;
+
+}
+
+.conteneurs-vertical {
+  display: flex;
+  width: 100%;
+  height: 100%;
+
+}
+
+/* Conteneur 2 */
+#conteneur-2 {
+  width: 300px;
+  height: 100%;
+  background-color: #BCE0FD;
+  display: flex;
+  justify-content: center; /* Centrer le contenu horizontalement */
+  align-items: center; /* Centrer le contenu verticalement */
+  z-index: 10; /* S'assurer qu'il est au-dessus des autres éléments, si nécessaire */
+}
+
+
+/* Style pour la colonne des bénéficiaires */
+.col-beneficiaires {
+  position: relative;
+  top: 25px;
+  width: 90%; /* Ajuste la largeur selon tes besoins */
+  height: 60vh; /* Utilise vh pour ajuster la hauteur en fonction de la taille de l'écran */
+  max-height: 840px; /* Assure une hauteur maximale si l'écran est trop petit */
+  background-color: #FFFFFF;
+  border: 2px solid #BCE0FD; /* Bordure de 2px */
+  border-radius: 10px; /* Coins arrondis de 10px */
+  font-family: Arial; /* Typographie Arial */
+  font-size: 10px; /* Taille de la police 10px */
+  overflow-y: auto; /* Ajoute un défilement vertical */
+  padding: 10px; /* Ajoute du padding pour éviter que le texte touche les bords */
+}
+
+/* Media queries pour ajuster la taille de la police et d'autres propriétés sur des écrans plus petits */
+@media (max-width: 768px) {
+  .col-beneficiaires {
+    height: 50vh; /* Réduit la hauteur sur les écrans plus petits */
+    font-size: 9px; /* Réduit la taille de la police pour mieux s'adapter */
+  }
+}
+
+@media (max-width: 480px) {
+  .col-beneficiaires {
+    height: 40vh; /* Encore moins de hauteur sur les écrans très petits */
+    font-size: 8px; /* Réduit davantage la taille de la police */
+  }
+}
+
+.beneficiaire {
+  padding: 5px;
+  border-bottom: 1px solid #BCE0FD; /* Ligne de séparation entre les bénéficiaires */
+  cursor: pointer; /* Le curseur change en pointeur pour indiquer que c'est cliquable */
+}
+
+/* Effet visuel au survol d'un bénéficiaire */
+.beneficiaire:hover {
+  background-color: #F1F9FF;
+}
+
+.beneficiaire:last-child {
+  border-bottom: none; /* Pas de bordure pour le dernier élément */
+}
+
+/* Conteneur 3 */
+#conteneur-3 {
+  flex-grow: 1;
+  height: 100%;
+
+  background-color: #F1F9FF;
+}
+
+table {
+  border-collapse: separate;
+  border-spacing: 0 2px;
+  width: 100%;
+  padding: 0px 10px 10px 10px;
+  background-color: #F1F9FF; /* Couleur de fond de la table */
+}
+
+#conteneur-4 {
+  width: calc(100% - 300px); /* Largeur restante */
+  margin-left: 300px; /* Déplacement de 300px à gauche */
+  height: 74px;
+  background-color: #3081C2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+	position: relative; /* Assurez-vous d'avoir une position pour le z-index */
+	z-index: 5; /* S'assurer qu'il est au-dessus des autres éléments, si nécessaire */
+}
+
+
+
+/* Style général des lignes */
+.ligne, .ligne2 {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end; /* Aligne tout sur la droite */
+    margin-bottom: 10px;
+	
+}
+
+/* Style des labels */
+label {
+    font-family: Arial, sans-serif;
+    font-weight: bold;
+    font-size: 16px;
+    color: white;
+    margin-right: 10px;
+}
+
+/* Style spécifique de chaque champ de texte */
+input[type="text"] {
+    padding: 5px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 80px; /* Largeur du champ */
+	margin-left: auto; /* Aligne l'input à droite */
+}
+
+/* Ajout de marge pour .ligne2 si nécessaire */
+.ligne2 {
+    margin-left: 20px; /* Si tu souhaites un décalage pour cette ligne */
+}
+
+/* ----------- Gère la dimension ------------- */
+th, td {
+  height: 23px; /* Gère la hauteur des cellules */
+  border-radius: 4px;
+  text-align: center;
+  padding: 0;
+}
+
+thead th {
+  font: normal normal bold 18px Arial;
+  color: #2699FB;
+  height: 20px;
+}
+
+th.col-a {
+  width: 34px;
+  border: none;
+}
+
+/* Stylisation des cases à cocher */
+td.col-a input[type="checkbox"] {
+  appearance: none;
+  width: 14px;
+  height: 14px;
+  border: 2px solid #2699FB;
+  border-radius: 4px;
+  cursor: pointer;
+  background-color: white;
+}
+
+td.col-a input[type="checkbox"]:checked {
+  background-color: #2699FB;
+}
+
+td.col-a input[type="checkbox"]:checked:after {
+  content: '✔';
+  color: #2699FB;
+  font-size: 12px;
+  position: absolute;
+  top: -2px;
+  left: 1px;
+}
+
+/* Stylisation de l'entête de la colonne jours */
+thead th.col-jours { 
+  font: normal normal bold 18px Arial;
+  color: #2699FB;
+  height: 20px;
+  border: none;
+}
+
+/* Stylisation des colonnes jours */
+td.col-jours {
+  width: 34px;
+  border: 2px solid #2699FB; /* Bordure bleue */
+  border-radius: 4px; /* Coins arrondis */
+  text-align: center; /* Centrer le texte */
+  font-family: Arial, sans-serif;
+  color: #2699FB;
+}
+
+/* Stylisation de la colonne trajet */
+th.col-trajet, td.col-trajet {
+  width: 900px;
+  border: 2px solid #2699FB;
+  padding: 2px;
+  text-align: center;
+}
+
+/* Stylisation de l'entête de la colonne trajet */
+thead th.col-trajet {
+  font: normal normal bold 18px Arial;
+  color: #2699FB;
+  height: 20px; 
+  border: none;
+}
+
+.col-trajet {
+    font-family: Arial, sans-serif;
+    font-size: 11px;
+    color: #000000; /* Utiliser la même couleur que les autres colonnes si nécessaire */
+	
+}
+.col-trajet span {
+    cursor: pointer;
+}
+
+/* Stylisation de la colonne calcul */
+th.col-calcul, td.col-calcul {
+  width: 410px;
+  border: 2px solid #2699FB;
+  padding: 2px;
+  text-align: center;
+}
+
+/* Stylisation de l'entête de la colonne calcul */
+thead th.col-calcul {
+  font: normal normal bold 18px Arial;
+  color: #2699FB;
+  height: 20px;
+  border: none;
+}
+
+/* Stylisation de la colonne total */
+th.col-total, td.col-total {
+  width: 63px;
+  border: 2px solid #2699FB;
+  padding: 2px;
+  text-align: center;
+}
+
+/* Stylisation de l'entête de la colonne total */
+thead th.col-total {
+  font: normal normal bold 18px Arial;
+  color: #2699FB;
+  height: 20px;
+  border: none;
+}
+
+.col-calcul {
+    font-family: Arial, sans-serif;
+    font-size: 12px;
+    color: #000000; /* Utiliser la même couleur que les autres colonnes si nécessaire */
+	
+}
+.col-calcul span {
+    cursor: pointer;
+}
+
+.col-total {
+    font-family: Arial, sans-serif;
+    font-size: 12px;
+    color: #000000; /* Utiliser la même couleur que les autres colonnes si nécessaire */
+	
+}
+
+
+.spacer {
+  width: 10px;
+  border: none;
+}
+
+td.sunday {
+  background-color: #ADD8E6; /* Couleur bleue pour les dimanches */
+  font-weight: bold;
+}
+
+td.holiday {
+  background-color: #FF6347;
+  color: white; /* Mettre le texte en blanc */
+  font-weight: bold;
+}
+
+/* Titres */
+.title-col-calcul, .title-col-total {
+  font: normal normal bold 18px Arial;
+  color: #2699FB;
+}
+
+/* Champs de kilomètres */
+.km-input, .distances {
+  font-family: Arial, sans-serif;
+  font-size: 12px;
+  color: #2699FB;
+}
+
+.distances {
+  cursor: pointer;
+}
+
+.beneficiaire-item {
+    cursor: pointer;
+    color: #000000; /* Couleur pour indiquer un élément cliquable */
+    margin-right: 4px; /* Espacement entre les éléments */
+}
+
+.beneficiaire-item:hover {
+    text-decoration: underline; /* Souligner au survol */
+}
+
